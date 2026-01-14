@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Victor KRETZ - Étudiant Ingénieur Logiciel & IA</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Victor KRETZ</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Expérience</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">EN</button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Victor Kretz</h1>
+            <p class="hero-title" data-i18n="hero.title">Etudiant Ingénieur Logiciel & IA</p>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">En recherche d'un stage de fin d'étude en ingénierie logicielle et IA à partir de Septembre 2026</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.cta">Voir mes projets</a>
+                <a href="https://github.com/Mino1289" target="_blank" class="btn btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">À propos</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-i18n="about.p1">
+                            Étudiant ingénieur en dernière année à l'UTBM, actuellement en maîtrise en Intelligence Artificielle
+                            à l'UQAC (Université du Québec à Chicoutimi). Spécialisé en ingénierie logicielle et intelligence artificielle,
+                            avec une expérience en vision par ordinateur et génération d'images synthétiques.
+                        </p>
+                        <p data-i18n="about.p2">
+                            Mon parcours international (France, Slovénie, Belgique, Canada) m'a permis d'acquérir des compétences
+                            variées allant du développement bas niveau en C/C++ au développement web puis au deep learning avec PyTorch,
+                            en passant par la programmation parallèle (OpenMP, MPI, CUDA).
+                        </p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span class="info-icon">🎓</span>
+                                <span data-i18n="about.info.school">UTBM + UQAC</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">📍</span>
+                                <span data-i18n="about.info.location">Chicoutimi, Québec</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">🌐</span>
+                                <span data-i18n="about.info.languages">Français, Anglais C1</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-icon">💼</span>
+                                <span data-i18n="about.info.internship">Stage Février 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" id="repo-count">38+</span>
+                            <span class="stat-label" data-i18n="about.stats.projects">Projets</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label" data-i18n="about.stats.internship">Mois de stage</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label" data-i18n="about.stats.countries">Pays</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="exp.title">Expérience & Formation</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 data-i18n="exp.uqac.title">Maîtrise en Informatique, spé. IA</h3>
+                                <span class="timeline-date">2025 - 2026</span>
+                            </div>
+                            <p class="timeline-company" data-i18n="exp.uqac.company">🎓 Université du Québec à Chicoutimi (UQAC), Canada</p>
+                            <p class="timeline-description" data-i18n="exp.uqac.desc">
+                                Spécialisation en Intelligence Artificielle.
+                                Machine Learning, Deep Learning, Big Data, Vision artificielle.
+                                Programmation parallèle (OpenMP, MPI, OpenCL). 
+                                Projet séminaire IA, Hackathon CIT×UQAC (2ème place).
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">Big Data</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 data-i18n="exp.jcd.title">Stagiaire Ingénieur Logiciel & IA</h3>
+                                <span class="timeline-date">Sept. 2024 - Fév. 2025</span>
+                            </div>
+                            <p class="timeline-company" data-i18n="exp.jcd.company">🏢 John Cockerill Defense, Loncin, Belgique</p>
+                            <p class="timeline-description" data-i18n="exp.jcd.desc">
+                                Génération d'images synthétiques et augmentation de données.
+                                Utilisation de modèles d'IA générative et de détection.
+                                Automatisation des tâches de génération, d'annotation et de description.
+                                Benchmark des performances et conception d'algorithmes d'estimation.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="skill-tag" data-i18n="tag.generativeAI">IA Générative</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">PyTorch</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 data-i18n="exp.utbm.title">Ingénieur Informatique, filière Développement, filière IA</h3>
+                                <span class="timeline-date">2024 - 2026</span>
+                            </div>
+                            <p class="timeline-company" data-i18n="exp.utbm.company">🎓 UTBM, Belfort, France</p>
+                            <p class="timeline-description" data-i18n="exp.utbm.desc">
+                                Programmation objet, bases de données, développement web.
+                                Ingénierie et qualité logicielle, Java entreprise.
+                                Informatique théorique classique et quantique, recherche opérationnelle, optimisation.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C/C++</span>
+                                <span class="skill-tag" data-i18n="tag.algorithms">Algorithmique</span>
+                                <span class="skill-tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 data-i18n="exp.slovenia.title">Semestre d'étude en Slovénie</h3>
+                                <span class="timeline-date">Fév. - Juin 2023</span>
+                            </div>
+                            <p class="timeline-company" data-i18n="exp.slovenia.company">🎓 FAMNIT, University of Primorska, Koper</p>
+                            <p class="timeline-description" data-i18n="exp.slovenia.desc">
+                                Cours dispensés en anglais : mathématiques, informatique, analyse de données.
+                                Travaux dirigés et projets en équipe, communication technique en anglais.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="skill-tag" data-i18n="tag.english">Anglais</span>
+                                <span class="skill-tag">Data Analysis</span>
+                                <span class="skill-tag">International</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills.title">Compétences</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-i18n="skills.languages">Langages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">C/C++</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills.ai">IA & Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Keras/TensorFlow</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">Pandas</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills.hpc">Parallélisme & HPC</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OpenMP</span>
+                            <span class="skill-tag">MPI</span>
+                            <span class="skill-tag">OpenCL</span>
+                            <span class="skill-tag">CUDA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skills.tools">Outils & Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Qiskit</span>
+                            <span class="skill-tag">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">Projets</h2>
+                
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="featured" data-i18n="projects.featured">⭐ Mis en avant</button>
+                    <button class="filter-btn" data-filter="all" data-i18n="projects.all">Tous les projets</button>
+                </div>
+
+                <div id="featured-projects" class="projects-grid">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p data-i18n="projects.loading">Chargement des projets...</p>
+                    </div>
+                </div>
+
+                <div id="all-projects" class="projects-grid" style="display: none;">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p data-i18n="projects.loading">Chargement des projets...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Contact</h2>
+                <div class="contact-content">
+                    <p data-i18n="contact.text">Intéressé par mon profil ? N'hésitez pas à me contacter !</p>
+                    <div class="contact-links">
+                        <a href="mailto:victor.kretz@utbm.fr" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Email
+                        </a>
+                        <a href="https://github.com/Mino1289" target="_blank" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/victor-kretz/" target="_blank" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.rights">&copy; 2026 Mino1289. Tous droits réservés.</p>
+            <p class="footer-note" data-i18n="footer.note">Ce portfolio se met à jour automatiquement via l'API GitHub.</p>
+        </div>
+    </footer>
+
+    <!-- Modal pour les détails du projet -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modal-body">
+                <!-- Contenu chargé dynamiquement -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
