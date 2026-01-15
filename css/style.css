@@ -409,6 +409,17 @@ img {
     margin-bottom: 12px;
 }
 
+.timeline-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.timeline-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
 .timeline-description {
     color: var(--text-secondary);
     font-size: 0.95rem;
@@ -542,6 +553,7 @@ img {
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
+    color: var(--text-primary);
 }
 
 .filter-btn:hover,
@@ -645,6 +657,122 @@ img {
     display: flex;
     align-items: center;
     gap: 4px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ===== External Project Cards ===== */
+.project-card-external {
+    border: 2px dashed var(--primary-color);
+    background: linear-gradient(135deg, var(--background) 0%, rgba(37, 99, 235, 0.03) 100%);
+}
+
+.project-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.project-title-row .project-title {
+    margin-bottom: 0;
+}
+
+.external-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.external-badge-modal {
+    background: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+.project-repos {
+    padding: 0 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.external-repo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.external-repo-link:hover {
+    opacity: 0.8;
+}
+
+.repo-role {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.project-topics {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.topic-tag {
+    background: var(--background-alt);
+    color: var(--text-secondary);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+.external-repos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.external-repo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: var(--background-alt);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    color: var(--text-primary);
+}
+
+.external-repo-card:hover {
+    border-color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+.external-repo-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.external-repo-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.external-repo-role {
     font-size: 0.85rem;
     color: var(--text-secondary);
 }

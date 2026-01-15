@@ -23,7 +23,7 @@ const translations = {
         'about.info.school': 'UTBM + UQAC',
         'about.info.location': 'Chicoutimi, Québec',
         'about.info.languages': 'Français, Anglais C1',
-        'about.info.internship': 'Stage Février 2026',
+        'about.info.internship': 'Stage Septembre 2026',
         'about.stats.projects': 'Projets',
         'about.stats.internship': 'Mois de stage',
         'about.stats.countries': 'Pays',
@@ -31,14 +31,18 @@ const translations = {
         // Experience
         'exp.title': 'Expérience & Formation',
         'exp.uqac.title': 'Maîtrise en Informatique, spé. IA',
-        'exp.uqac.company': '🎓 Université du Québec à Chicoutimi (UQAC), Canada',
-        'exp.uqac.desc': 'Spécialisation en Intelligence Artificielle. Machine Learning, Deep Learning, Big Data, Vision artificielle. Programmation parallèle (OpenMP, MPI, OpenCL). Projet séminaire IA, Hackathon CIT×UQAC (2ème place).',
+        'exp.uqac.company': 'Université du Québec à Chicoutimi (UQAC), Canada',
+        'exp.uqac.desc.main': 'Spécialisation en Intelligence Artificielle. Machine Learning, Deep Learning, Big Data, Vision artificielle. Programmation parallèle (OpenMP, MPI, OpenCL). Projet séminaire IA,',
+        'exp.uqac.hackathon': 'Hackathon CIT×UQAC (2ème place)',
         'exp.jcd.title': 'Stagiaire Ingénieur Logiciel & IA',
-        'exp.jcd.company': '🏢 John Cockerill Defense, Loncin, Belgique',
+        'exp.jcd.company': 'John Cockerill Defense, Loncin, Belgique',
         'exp.jcd.desc': 'Génération d\'images synthétiques et augmentation de données. Utilisation de modèles d\'IA générative et de détection. Automatisation des tâches de génération, d\'annotation et de description. Benchmark des performances et conception d\'algorithmes d\'estimation.',
-        'exp.utbm.title': 'Ingénieur Informatique, filière Développement, filière IA',
-        'exp.utbm.company': '🎓 UTBM, Belfort, France',
-        'exp.utbm.desc': 'Programmation objet, bases de données, développement web. Ingénierie et qualité logicielle, Java entreprise. Informatique théorique classique et quantique, recherche opérationnelle, optimisation.',
+        'exp.utbm.br.title': 'Ingénieur Informatique, filière Développement, filière IA',
+        'exp.utbm.br.company': '🎓 UTBM, Belfort, France',
+        'exp.utbm.br.desc': 'Programmation objet, bases de données, développement web. Ingénierie et qualité logicielle, Java entreprise. Informatique théorique classique et quantique, recherche opérationnelle, optimisation.',
+        'exp.utbm.tc.title': 'Tronc Commun',
+        'exp.utbm.tc.company': '🎓 UTBM, Belfort, France',
+        'exp.utbm.tc.desc': 'Fondamentaux de l\'informatique : algorithmique, structures de données, programmation impérative. Algèbre, analyse, probabilités et statistiques. Introduction aux systèmes informatiques, réseaux et bases de données.', 
         'exp.slovenia.title': 'Semestre d\'étude en Slovénie',
         'exp.slovenia.company': '🎓 FAMNIT, University of Primorska, Koper',
         'exp.slovenia.desc': 'Cours dispensés en anglais : mathématiques, informatique, analyse de données. Travaux dirigés et projets en équipe, communication technique en anglais.',
@@ -81,7 +85,9 @@ const translations = {
         // Tags
         'tag.generativeAI': 'IA Générative',
         'tag.english': 'Anglais',
-        'tag.algorithms': 'Algorithmique'
+        'tag.algorithms': 'Algorithmique',
+        'tag.fundamentals': 'Fondamentaux',
+        'tag.compSci': 'Science informatique'
     },
     en: {
         // Navigation
@@ -103,7 +109,7 @@ const translations = {
         'about.info.school': 'UTBM + UQAC',
         'about.info.location': 'Chicoutimi, Quebec',
         'about.info.languages': 'French, English C1',
-        'about.info.internship': 'Internship Feb. 2026',
+        'about.info.internship': 'Internship Sept. 2026',
         'about.stats.projects': 'Projects',
         'about.stats.internship': 'Months internship',
         'about.stats.countries': 'Countries',
@@ -111,14 +117,18 @@ const translations = {
         // Experience
         'exp.title': 'Experience & Education',
         'exp.uqac.title': 'Master\'s in Computer Science, AI spec.',
-        'exp.uqac.company': '🎓 Université du Québec à Chicoutimi (UQAC), Canada',
-        'exp.uqac.desc': 'Specialization in Artificial Intelligence. Machine Learning, Deep Learning, Big Data, Computer Vision. Parallel programming (OpenMP, MPI, OpenCL). AI seminar project, CIT×UQAC Hackathon (2nd place).',
+        'exp.uqac.company': 'Université du Québec à Chicoutimi (UQAC), Canada',
+        'exp.uqac.desc.main': 'Specialization in Artificial Intelligence. Machine Learning, Deep Learning, Big Data, Computer Vision. Parallel programming (OpenMP, MPI, OpenCL). AI seminar project,',
+        'exp.uqac.hackathon': 'CIT×UQAC Hackathon (2nd place)',
         'exp.jcd.title': 'Software & AI Engineering Intern',
-        'exp.jcd.company': '🏢 John Cockerill Defense, Loncin, Belgium',
+        'exp.jcd.company': 'John Cockerill Defense, Loncin, Belgium',
         'exp.jcd.desc': 'Synthetic image generation and data augmentation. Use of generative AI and detection models. Automation of generation, annotation and description tasks. Performance benchmarking and estimation algorithm design.',
-        'exp.utbm.title': 'Computer Engineering, Development and AI tracks',
-        'exp.utbm.company': '🎓 UTBM, Belfort, France',
-        'exp.utbm.desc': 'Object-oriented programming, databases, web development. Software engineering and quality, enterprise Java. Classical and quantum theoretical computer science, operations research, optimization.',
+        'exp.utbm.br.title': 'Computer Engineering, Development & AI tracks',
+        'exp.utbm.br.company': '🎓 UTBM, Belfort, France',
+        'exp.utbm.br.desc': 'Object-oriented programming, databases, web development. Software engineering and quality, enterprise Java. Classical and quantum theoretical computer science, operations research, optimization.',
+        'exp.utbm.tc.title': 'Common Core',
+        'exp.utbm.tc.company': '🎓 UTBM, Belfort, France',
+        'exp.utbm.tc.desc': 'Computer science fundamentals: algorithms, data structures, imperative programming. Algebra, analysis, probability and statistics. Introduction to computer systems, networks and databases.',
         'exp.slovenia.title': 'Study semester in Slovenia',
         'exp.slovenia.company': '🎓 FAMNIT, University of Primorska, Koper',
         'exp.slovenia.desc': 'Courses taught in English: mathematics, computer science, data analysis. Group projects and tutorials, technical communication in English.',
@@ -161,7 +171,9 @@ const translations = {
         // Tags
         'tag.generativeAI': 'Generative AI',
         'tag.english': 'English',
-        'tag.algorithms': 'Algorithms'
+        'tag.algorithms': 'Algorithms',
+        'tag.fundamentals': 'Fundamentals',
+        'tag.compSci': 'Computer Science'
     }
 };
 

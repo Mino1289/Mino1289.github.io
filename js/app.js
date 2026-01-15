@@ -15,7 +15,6 @@ class Portfolio {
         this.setupTheme();
         this.setupNavigation();
         this.setupModal();
-        this.setupFilters();
         await this.loadRepos();
     }
 
@@ -186,26 +185,52 @@ class Portfolio {
         document.body.style.overflow = '';
     }
 
-    // ===== Filters =====
-    setupFilters() {
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+    openExternalModal(project) {
+        const modal = document.getElementById('project-modal');
+        const modalBody = document.getElementById('modal-body');
+        
+        const t = (key) => window.i18n ? window.i18n.t(key) : key;
 
-                const filter = btn.dataset.filter;
-                const featuredGrid = document.getElementById('featured-projects');
-                const allGrid = document.getElementById('all-projects');
+        modalBody.innerHTML = `
+            <div class="modal-header">
+                <h3 class="modal-title">${project.name}</h3>
+                <span class="external-badge-modal">🏢 Projet en groupe</span>
+            </div>
 
-                if (filter === 'featured') {
-                    featuredGrid.style.display = 'grid';
-                    allGrid.style.display = 'none';
-                } else {
-                    featuredGrid.style.display = 'none';
-                    allGrid.style.display = 'grid';
-                }
-            });
-        });
+            <div class="modal-section">
+                <h4>${t('modal.description')}</h4>
+                <p class="modal-description">${project.description}</p>
+            </div>
+
+            <div class="modal-section">
+                <h4>${t('modal.technologies')}</h4>
+                <div class="modal-topics">
+                    ${project.topics.map(topic => `<span class="modal-topic">${topic}</span>`).join('')}
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h4>📂 Repositories</h4>
+                <div class="external-repos-list">
+                    ${project.repos.map(r => `
+                        <a href="${r.url}" target="_blank" class="external-repo-card">
+                            <div class="external-repo-info">
+                                <span class="external-repo-name">📁 ${r.name}</span>
+                                <span class="external-repo-role">${r.role}</span>
+                            </div>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     // ===== Load Repos =====
@@ -237,9 +262,17 @@ class Portfolio {
             this.featuredRepos = this.repos.filter(repo => featuredNames.includes(repo.name));
             this.allRepos = this.repos;
 
+            // Ajouter les projets externes
+            if (CONFIG.externalProjects) {
+                this.featuredRepos = [...this.featuredRepos, ...CONFIG.externalProjects];
+            }
+
             // Trier les featured selon l'ordre de config
             this.featuredRepos.sort((a, b) => {
-                return featuredNames.indexOf(a.name) - featuredNames.indexOf(b.name);
+                const aIndex = featuredNames.indexOf(a.name);
+                const bIndex = featuredNames.indexOf(b.name);
+                // Les projets externes vont à la fin si pas dans featuredProjects
+                return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
             });
 
             this.renderProjects();
@@ -252,12 +285,11 @@ class Portfolio {
 
     renderProjects() {
         const featuredGrid = document.getElementById('featured-projects');
-        const allGrid = document.getElementById('all-projects');
 
         // Render featured projects
         if (this.featuredRepos.length > 0) {
             featuredGrid.innerHTML = this.featuredRepos.map(repo => 
-                this.createProjectCard(repo, true)
+                this.createProjectCard(repo)
             ).join('');
         } else {
             featuredGrid.innerHTML = `
@@ -268,23 +300,19 @@ class Portfolio {
             `;
         }
 
-        // Render all projects
-        if (this.allRepos.length > 0) {
-            allGrid.innerHTML = this.allRepos.map(repo => 
-                this.createProjectCard(repo, false)
-            ).join('');
-        } else {
-            allGrid.innerHTML = `
-                <div class="empty-state">
-                    <div class="empty-state-icon">📁</div>
-                    <p>Aucun projet trouvé.</p>
-                </div>
-            `;
-        }
-
         // Ajouter les event listeners pour les cartes
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('click', () => {
+                // Vérifier si c'est un projet externe
+                const externalName = card.dataset.external;
+                if (externalName) {
+                    const externalProject = CONFIG.externalProjects.find(p => p.name === externalName);
+                    if (externalProject) {
+                        this.openExternalModal(externalProject);
+                    }
+                    return;
+                }
+
                 const repoName = card.dataset.repo;
                 const repo = this.repos.find(r => r.name === repoName);
                 if (repo) {
@@ -294,14 +322,18 @@ class Portfolio {
         });
     }
 
-    createProjectCard(repo, isFeatured) {
+    createProjectCard(repo) {
+        // Gérer les projets externes différemment
+        if (repo.isExternal) {
+            return this.createExternalProjectCard(repo);
+        }
+
         const projectConfig = CONFIG.featuredProjects.find(p => p.name === repo.name);
         const description = projectConfig?.customDescription || repo.description || 'Aucune description disponible.';
         const languageColor = CONFIG.languageColors[repo.language] || '#858585';
-        const featuredClass = isFeatured ? 'featured' : '';
 
         return `
-            <article class="project-card ${featuredClass}" data-repo="${repo.name}">
+            <article class="project-card" data-repo="${repo.name}">
                 <div class="project-header">
                     <h3 class="project-title">${repo.name}</h3>
                     <p class="project-description">${description}</p>
@@ -326,6 +358,40 @@ class Portfolio {
         `;
     }
 
+    createExternalProjectCard(project) {
+        const languageColor = CONFIG.languageColors[project.language] || '#858585';
+
+        return `
+            <article class="project-card project-card-external" data-external="${project.name}">
+                <div class="project-header">
+                    <div class="project-title-row">
+                        <h3 class="project-title">${project.name}</h3>
+                        <span class="external-badge">🏢 Projet Multi-repo</span>
+                    </div>
+                    <p class="project-description">${project.description}</p>
+                </div>
+                <div class="project-repos">
+                    ${project.repos.map(r => `
+                        <a href="${r.url}" target="_blank" class="external-repo-link" onclick="event.stopPropagation();">
+                            📁 ${r.name} <span class="repo-role">(${r.role})</span>
+                        </a>
+                    `).join('')}
+                </div>
+                <div class="project-meta">
+                    ${project.language ? `
+                    <div class="project-language">
+                        <span class="language-dot" style="background-color: ${languageColor}"></span>
+                        ${project.language}
+                    </div>
+                    ` : '<div></div>'}
+                    <div class="project-topics">
+                        ${project.topics.slice(0, 3).map(t => `<span class="topic-tag">${t}</span>`).join('')}
+                    </div>
+                </div>
+            </article>
+        `;
+    }
+
     showError() {
         const errorHtml = `
             <div class="empty-state">
@@ -335,7 +401,6 @@ class Portfolio {
         `;
         
         document.getElementById('featured-projects').innerHTML = errorHtml;
-        document.getElementById('all-projects').innerHTML = errorHtml;
     }
 
     formatDate(dateString) {
