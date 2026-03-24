@@ -41,6 +41,11 @@ const CONFIG = {
             customTopics: ['Machine Learning', 'Neural Networks', 'CNN', 'Python', 'Deep Learning']
         },
         {
+            name: 'lp25-project',
+            customDescription: 'Projet de développement d\'un analyseur d\'email en C, parallélisé avec fork, pour extraire des informations clés telles que les adresses email et construire des statistiques sur les expéditeurs.',
+            customTopics: ['C', 'Email Parsing', 'Parallel Programming', 'Fork']
+        },
+        {
             name: 'Upsilon',
             customDescription: 'Contribution au développement de Upsilon, un logiciel tiers pour calculatrice graphique Numworks, ajoutant de nouvelles fonctionnalités et améliorations. Co-créateur de l\'application Liseuse pour Numworks, supportant des commandes partielles LaTeX.',
             customTopics: ['C++', 'Embedded Systems', 'Calculator']
