@@ -70,11 +70,6 @@ const CONFIG = {
             customDescription: 'Un site d\'offres d\'emploi multi-entreprises, côté RH et côté demandeurs d\'emploi (Matière WE4B)',
             customTopics: ['Web Development', 'Job Portal', 'Human Resources', 'Angular']
         },
-        {
-            name: 'WE4A-W',
-            customDescription: 'Le projet consistait à créer un réseau social sous forme de site Web. Celui-ci devait comporter la plupart des fonctionnalités de base d\'un réseau social, comme la publication des posts, des likes, des commentaires, etc. (Matière WE4A)',
-            customTopics: ['Social Media', 'Web Development', 'PHP', 'MySQL']
-        }
     ],
 
     // Mapping des couleurs des langages
