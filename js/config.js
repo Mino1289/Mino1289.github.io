@@ -41,6 +41,11 @@ const CONFIG = {
             customTopics: ['Computer Vision', 'Object Detection', 'Machine Learning', 'Python', 'LLM', 'RAG', 'Streamlit']
         },
         {
+            name: 'SideLine-AI',
+            customDescription: 'Conception de SideLine AI, une pipeline de vision par ordinateur sophistiquée qui automatise l\'analyse tactique du hockey sur glace en combinant la segmentation d\'instances via YOLO26 et le suivi multi-objets par ByteTrack. Le système assure une compréhension profonde du jeu grâce à la classification automatique des équipes et l\'identification des joueurs par OCR, tout en garantissant une précision spatiale optimale via une cartographie 2D stabilisée par la détection de points clés structurels de la patinoire. Ce projet transforme ainsi des flux vidéo bruts en données analytiques normalisées, surmontant l\'absence de données annotées par une approche méthodologique rigoureuse.',
+            customTopics: ['Computer Vision', 'Object Detection', 'Instance Segmentation', 'Machine Learning', 'Multi-Object Tracking', 'OCR', 'Python', 'YOLO26', 'ByteTrack', 'K-Means', 'RANSAC']
+        },
+        {
             name: 'MNIST',
             customDescription: 'Implémentation complète d\'un classificateur pour le dataset MNIST. Comprend un Perceptron Multicouche (MLP) et un Réseau de Neurones Convolutif (CNN) avec visualisation des résultats. Première approche du deep learning et de la vision par ordinateur.',
             customTopics: ['Machine Learning', 'Neural Networks', 'CNN', 'Python', 'Deep Learning']
