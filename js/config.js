@@ -33,7 +33,12 @@ const CONFIG = {
         {
             name: 'Hackathon_CIT_UQAC',
             customDescription: 'Projet développé lors d\'un hackathon de 24 heures visant à créer un dashboard interactif pour la visualisation de données en temps réel et un chatbot intelligent pour l\'assistance aux utilisateurs connecté à la base de donnée.',
-            customTopics: ['Data Visualization', 'Chatbot', 'APIs', 'Python', 'Streamlit', 'LLM', 'Ai Agents']
+            customTopics: ['Data Visualization', 'Chatbot', 'APIs', 'Python', 'Streamlit', 'LLM', 'AI Agents']
+        },
+        {
+            name: 'CarScan',
+            customDescription: 'Projet de développement d\'une application destinés au professionnels de la vente de voiture usagés: Détections de dommage sur la carroserie, analyse d\'historique d\'entretien, prédiction de pannes futures, estimation du temps de revente, et proposition de valeure de rachat. Utilise des techniques de vision par ordinateur pour l\'analyse d\'images de voitures, et des modèles de machine learning pour les prédictions basées sur les données historiques, LLM+RAG pour l\'analyse de texte et la génération de rapports automatisés',
+            customTopics: ['Computer Vision', 'Object Detection', 'Machine Learning', 'Python', 'LLM', 'RAG', 'Streamlit']
         },
         {
             name: 'MNIST',
