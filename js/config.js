@@ -26,16 +26,6 @@ const CONFIG = {
             customTopics: ['Deep Learning', 'Computer Vision', 'Video Processing', 'PyTorch', 'Segmentation']
         },
         {
-            name: 'TSP_Little',
-            customDescription: 'Implémentation de l\'algorithme de Little pour résoudre le problème du voyageur de commerce de manière optimale. Utilise la méthode de branch and bound pour minimiser les coûts de déplacement. Implémentation en C avec parallélisation de la découverte de branche avec OpenMP. (basé sur le projet de la Matière IT45, mais plus poussé.)',
-            customTopics: ['Algorithms', 'Branch and Bound', 'C', 'Optimization', 'OpenMP']
-        },
-        {
-            name: 'Hackathon_CIT_UQAC',
-            customDescription: 'Projet développé lors d\'un hackathon de 24 heures visant à créer un dashboard interactif pour la visualisation de données en temps réel et un chatbot intelligent pour l\'assistance aux utilisateurs connecté à la base de donnée.',
-            customTopics: ['Data Visualization', 'Chatbot', 'APIs', 'Python', 'Streamlit', 'LLM', 'AI Agents']
-        },
-        {
             name: 'CarScan',
             customDescription: 'Projet de développement d\'une application destinés au professionnels de la vente de voiture usagés: Détections de dommage sur la carroserie, analyse d\'historique d\'entretien, prédiction de pannes futures, estimation du temps de revente, et proposition de valeure de rachat. Utilise des techniques de vision par ordinateur pour l\'analyse d\'images de voitures, et des modèles de machine learning pour les prédictions basées sur les données historiques, LLM+RAG pour l\'analyse de texte et la génération de rapports automatisés',
             customTopics: ['Computer Vision', 'Object Detection', 'Machine Learning', 'Python', 'LLM', 'RAG', 'Streamlit']
@@ -44,6 +34,16 @@ const CONFIG = {
             name: 'SideLine-AI',
             customDescription: 'Conception de SideLine AI, une pipeline de vision par ordinateur sophistiquée qui automatise l\'analyse tactique du hockey sur glace en combinant la segmentation d\'instances via YOLO26 et le suivi multi-objets par ByteTrack. Le système assure une compréhension profonde du jeu grâce à la classification automatique des équipes et l\'identification des joueurs par OCR, tout en garantissant une précision spatiale optimale via une cartographie 2D stabilisée par la détection de points clés structurels de la patinoire. Ce projet transforme ainsi des flux vidéo bruts en données analytiques normalisées, surmontant l\'absence de données annotées par une approche méthodologique rigoureuse.',
             customTopics: ['Computer Vision', 'Object Detection', 'Instance Segmentation', 'Machine Learning', 'Multi-Object Tracking', 'OCR', 'Python', 'YOLO26', 'ByteTrack', 'K-Means', 'RANSAC']
+        },
+        {
+            name: 'Hackathon_CIT_UQAC',
+            customDescription: 'Projet développé lors d\'un hackathon de 24 heures visant à créer un dashboard interactif pour la visualisation de données en temps réel et un chatbot intelligent pour l\'assistance aux utilisateurs connecté à la base de donnée.',
+            customTopics: ['Data Visualization', 'Chatbot', 'APIs', 'Python', 'Streamlit', 'LLM', 'AI Agents']
+        },
+        {
+            name: 'TSP_Little',
+            customDescription: 'Implémentation de l\'algorithme de Little pour résoudre le problème du voyageur de commerce de manière optimale. Utilise la méthode de branch and bound pour minimiser les coûts de déplacement. Implémentation en C avec parallélisation de la découverte de branche avec OpenMP. (basé sur le projet de la Matière IT45, mais plus poussé.)',
+            customTopics: ['Algorithms', 'Branch and Bound', 'C', 'Optimization', 'OpenMP']
         },
         {
             name: 'MNIST',
